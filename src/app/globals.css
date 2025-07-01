@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s cubic-bezier(0.4,0,0.2,1) both;
+  }
+  .animate-fade-in-down {
+    animation: fade-in-down 0.8s cubic-bezier(0.4,0,0.2,1) both;
+  }
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in-down {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Shimmer effect */
+.shimmer {
+  pointer-events: none;
+  position: absolute;
+  top: 0;left:0;right:0;bottom:0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.group:hover .shimmer{
+  animation: shimmer-move 1.5s infinite;
+  opacity:1;
+}
+@keyframes shimmer-move {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Enable Tailwind dark mode via class strategy */
+@tailwind base;
+:root {
+  color-scheme: light dark;
+} 
