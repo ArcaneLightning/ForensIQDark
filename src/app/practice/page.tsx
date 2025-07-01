@@ -29,14 +29,12 @@ export default function Practice() {
     setFeedback,
     isAnalyzing,
     setIsAnalyzing,
-    audioRef,
     timerRef,
     practiceModes,
     sampleTopics,
     selectedTopic,
     setSelectedTopic,
     uploadedAudio,
-    setUploadedAudio,
     customTopic,
     setCustomTopic,
     showCustomTopicInput,
@@ -163,7 +161,7 @@ export default function Practice() {
                       className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500"
                     />
                     <div className="text-sm text-gray-400">
-                      Enter a topic you'd like to practice speaking about
+                      Enter a topic you&apos;d like to practice speaking about
                     </div>
                   </div>
                 ) : (

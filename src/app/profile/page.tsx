@@ -29,11 +29,8 @@ export default function Profile() {
     notifications,
     setNotifications,
     userProfile,
-    setUserProfile,
     achievements,
-    setAchievements,
-    stats,
-    setStats
+    stats
   } = useProfileData();
 
   const handleNotificationChange = (key) => {

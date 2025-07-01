@@ -19,17 +19,7 @@ export default function Debate() {
     isInDebate,
     setIsInDebate,
     debateTime,
-    setDebateTime,
     isSpeaking,
-    setIsSpeaking,
-    debateRooms,
-    setDebateRooms,
-    userStats,
-    setUserStats,
-    recentDebates,
-    setRecentDebates,
-    aiDebate,
-    setAiDebate,
     startAIDebate,
     endAIDebate,
     addUserArgument
@@ -41,7 +31,7 @@ export default function Debate() {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const joinRoom = (room: any) => {
+  const joinRoom = (room: unknown) => {
     setSelectedRoom(room);
     setIsInDebate(true);
   };

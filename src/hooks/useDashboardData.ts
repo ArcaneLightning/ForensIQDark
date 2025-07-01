@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Mic, Users, TrendingUp, Calendar } from 'lucide-react';
 
 // Types
 interface DashboardStats {
@@ -23,7 +24,7 @@ interface RecentActivity {
 interface QuickAction {
   title: string;
   description: string;
-  icon: any;
+  icon: unknown;
   color: string;
   href: string;
 }

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Target, Clock, MessageSquare, BarChart3 } from 'lucide-react';
 
 interface PracticeMode {
   id: string;
@@ -30,8 +31,8 @@ export const usePracticeData = () => {
   const [customTopic, setCustomTopic] = useState('');
   const [showCustomTopicInput, setShowCustomTopicInput] = useState(false);
 
-  const audioRef = useRef(null);
-  const timerRef = useRef<any>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const practiceModes: PracticeMode[] = [
@@ -58,7 +59,7 @@ export const usePracticeData = () => {
       setUploadedAudio(file);
       // Reset recording state when uploading file
       setIsRecording(false);
-      clearInterval(timerRef.current);
+      if (timerRef.current) clearInterval(timerRef.current);
     }
   };
 

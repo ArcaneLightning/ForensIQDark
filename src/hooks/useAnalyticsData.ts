@@ -39,7 +39,7 @@ interface Achievement {
   name: string;
   description: string;
   earned: string;
-  icon: any;
+  icon: React.ElementType;
 }
 
 interface PerformanceTime {

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Star, Target, Award, Clock } from 'lucide-react';
 
 interface UserProfile {
   name: string;
@@ -22,7 +23,7 @@ interface Achievement {
   name: string;
   description: string;
   earned: string;
-  icon: any;
+  icon: React.ElementType;
 }
 
 interface ProfileStats {
