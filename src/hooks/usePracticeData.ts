@@ -1,6 +1,10 @@
 import { useState, useRef } from 'react';
+<<<<<<< HEAD
 import { Target, Clock, MessageSquare, BarChart3 } from 'lucide-react';
 import React from 'react';
+=======
+import { Mic, MicOff, Play, Pause, RotateCcw, Download, Volume2, Target, Clock, Star, MessageSquare, BarChart3, Upload, X } from 'lucide-react';
+>>>>>>> parent of 6f13a25 (Deployment fixes)
 
 interface PracticeMode {
   id: string;

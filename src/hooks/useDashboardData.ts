@@ -1,5 +1,20 @@
 import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Mic, Users, TrendingUp, Calendar } from 'lucide-react';
+=======
+import { 
+  Mic, 
+  Users, 
+  TrendingUp, 
+  Calendar, 
+  Play, 
+  Target, 
+  Award,
+  Clock,
+  BarChart3,
+  MessageSquare
+} from 'lucide-react';
+>>>>>>> parent of 6f13a25 (Deployment fixes)
 
 // Types
 interface DashboardStats {
