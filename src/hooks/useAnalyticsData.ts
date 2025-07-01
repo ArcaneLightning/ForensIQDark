@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { 
   Target, 
-  Award, 
-  Clock, 
-  Activity,
-  Star,
-  Mic
+  Award,
+  Mic,
+  Star
 } from 'lucide-react';
 
 // Types

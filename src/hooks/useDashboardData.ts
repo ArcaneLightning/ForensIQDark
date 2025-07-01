@@ -1,16 +1,4 @@
 import { useState, useEffect } from 'react';
-import { 
-  Mic, 
-  Users, 
-  TrendingUp, 
-  Calendar, 
-  Play, 
-  Target, 
-  Award,
-  Clock,
-  BarChart3,
-  MessageSquare
-} from 'lucide-react';
 
 // Types
 interface DashboardStats {

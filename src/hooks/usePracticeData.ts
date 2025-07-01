@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import { Mic, MicOff, Play, Pause, RotateCcw, Download, Volume2, Target, Clock, Star, MessageSquare, BarChart3, Upload, X } from 'lucide-react';
 
 interface PracticeMode {
   id: string;

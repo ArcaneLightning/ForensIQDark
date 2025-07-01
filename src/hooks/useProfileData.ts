@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Star, Target, Award, Clock } from 'lucide-react';
 
 interface UserProfile {
   name: string;

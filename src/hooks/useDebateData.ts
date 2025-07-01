@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Users, Clock, Trophy, MessageSquare, Mic, MicOff, Play, Pause, Settings, BarChart3, Target, Award, Bot } from 'lucide-react';
 
 interface DebateRoom {
   id: number;
