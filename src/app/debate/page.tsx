@@ -5,13 +5,8 @@ import { useDebateData } from '../../hooks/useDebateData';
 import { 
   Users, 
   Clock, 
-  Mic, 
+  Mic,
   MicOff,
-  Pause,
-  Settings,
-  BarChart3,
-  Target,
-  Award,
   Bot
 } from 'lucide-react';
 

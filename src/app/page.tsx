@@ -178,7 +178,7 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-yellow-300 text-xl">{'★'.repeat(testimonial.rating)}</span>
               </div>
-              <div className="text-white/90 italic mb-2">"{testimonial.text}"</div>
+              <div className="text-white/90 italic mb-2">&quot;{testimonial.text}&quot;</div>
               <div className="flex items-center gap-2 mt-2">
                 <span className={`${testimonial.author.avatarColor} text-white rounded-full w-8 h-8 flex items-center justify-center font-bold`}>{testimonial.author.initials}</span>
                 <div>
@@ -199,7 +199,7 @@ export default function Home() {
           <p className="text-lg text-white/80 max-w-2xl mx-auto">Start free and upgrade as you grow. All plans include our core features.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {pricingPlans.map((plan, index) => (
+          {pricingPlans.map((plan) => (
             <div key={plan.name} className={`${plan.isPopular ? 'bg-white/10 border-2 border-cyan-400 scale-105 shadow-lg' : 'bg-white/5 border border-white/10'} rounded-2xl p-8 flex flex-col gap-4 items-center`}>
               <div className="font-bold text-xl mb-2">
                 {plan.name} 

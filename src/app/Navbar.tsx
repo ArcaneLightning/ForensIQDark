@@ -2,6 +2,7 @@
 
 import { useAuth } from '../contexts/AuthContext';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Navbar() {
   const { user, signOut } = useAuth();
@@ -27,17 +28,17 @@ export default function Navbar() {
           </div>
           <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-pulse shadow-sm"></div>
         </div>
-        <a href="/" className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent hover:opacity-80 transition">ForensIQ</a>
+        <Link href="/" className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent hover:opacity-80 transition">ForensIQ</Link>
       </div>
       
       {user ? (
         <>
           <ul className="hidden md:flex gap-8 text-sm font-medium">
-            <li><a href="/dashboard" className="hover:text-cyan-400 transition">Dashboard</a></li>
-            <li><a href="/practice" className="hover:text-cyan-400 transition">Practice</a></li>
-            <li><a href="/debate" className="hover:text-cyan-400 transition">Debate</a></li>
-            <li><a href="/analytics" className="hover:text-cyan-400 transition">Analytics</a></li>
-            <li><a href="/profile" className="hover:text-cyan-400 transition">Profile</a></li>
+            <li><Link href="/dashboard" className="hover:text-cyan-400 transition">Dashboard</Link></li>
+            <li><Link href="/practice" className="hover:text-cyan-400 transition">Practice</Link></li>
+            <li><Link href="/debate" className="hover:text-cyan-400 transition">Debate</Link></li>
+            <li><Link href="/analytics" className="hover:text-cyan-400 transition">Analytics</Link></li>
+            <li><Link href="/profile" className="hover:text-cyan-400 transition">Profile</Link></li>
           </ul>
           <div className="flex items-center gap-4">
             <span className="text-sm text-gray-400 hidden md:block">
@@ -65,11 +66,11 @@ export default function Navbar() {
         </>
       ) : (
         <div className="flex items-center gap-4">
-          <a href="/signup" className="group bg-gradient-to-r from-cyan-600 to-green-600 text-black font-bold px-5 py-2 rounded-full shadow hover:scale-105 transition overflow-hidden relative">
+          <Link href="/signup" className="group bg-gradient-to-r from-cyan-600 to-green-600 text-black font-bold px-5 py-2 rounded-full shadow hover:scale-105 transition overflow-hidden relative">
             <span className="relative z-10">Get Started</span>
             <span className="shimmer absolute inset-0"></span>
-          </a>
-          <a href="/signin" className="border border-white/30 text-white font-bold px-5 py-2 rounded-full hover:bg-white/10 transition">Sign In</a>
+          </Link>
+          <Link href="/signin" className="border border-white/30 text-white font-bold px-5 py-2 rounded-full hover:bg-white/10 transition">Sign In</Link>
         </div>
       )}
     </nav>

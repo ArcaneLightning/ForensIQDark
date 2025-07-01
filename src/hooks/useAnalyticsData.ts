@@ -1,16 +1,10 @@
 import { useState } from 'react';
 import { 
-  TrendingUp, 
-  TrendingDown, 
   Target, 
   Award, 
   Clock, 
-  BarChart3,
-  Calendar,
   Activity,
   Star,
-  Users,
-  MessageSquare,
   Mic
 } from 'lucide-react';
 
@@ -200,7 +194,6 @@ export const useAnalyticsData = () => {
     getMetricData,
     
     // Helper functions
-    getTrendIcon: (trend: 'up' | 'down') => trend === 'up' ? TrendingUp : TrendingDown,
     getTrendColor: (trend: 'up' | 'down') => trend === 'up' ? 'text-green-400' : 'text-red-400'
   };
 }; 

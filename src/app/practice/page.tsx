@@ -9,13 +9,9 @@ import {
   RotateCcw, 
   Download,
   Volume2,
-  Target,
-  Clock,
-  Star,
-  MessageSquare,
-  BarChart3,
   Upload,
-  X
+  X,
+  Star
 } from 'lucide-react';
 import ProtectedRoute from '../../components/ProtectedRoute';
 
