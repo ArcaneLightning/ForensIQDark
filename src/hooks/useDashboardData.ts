@@ -21,14 +21,6 @@ interface RecentActivity {
   date: string;
 }
 
-interface QuickAction {
-  title: string;
-  description: string;
-  icon: unknown;
-  color: string;
-  href: string;
-}
-
 export const useDashboardData = () => {
   // Dashboard Stats
   const [stats, setStats] = useState<DashboardStats>({
