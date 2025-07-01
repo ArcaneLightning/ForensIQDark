@@ -69,35 +69,11 @@ export const useDashboardData = () => {
   ]);
 
   // Quick Actions
-  const [quickActions, setQuickActions] = useState<QuickAction[]>([
-    {
-      title: 'Start Speech Practice',
-      description: 'Practice with AI feedback',
-      icon: Mic,
-      color: 'bg-blue-500',
-      href: '/practice'
-    },
-    {
-      title: 'Join Debate Room',
-      description: 'Find opponents and compete',
-      icon: Users,
-      color: 'bg-green-500',
-      href: '/debate'
-    },
-    {
-      title: 'View Analytics',
-      description: 'Track your progress',
-      icon: TrendingUp,
-      color: 'bg-purple-500',
-      href: '/analytics'
-    },
-    {
-      title: 'Schedule Session',
-      description: 'Book coaching time',
-      icon: Calendar,
-      color: 'bg-orange-500',
-      href: '/schedule'
-    }
+  const [quickActions] = useState([
+    { label: 'Start Practice', icon: Mic },
+    { label: 'Join Debate', icon: Users },
+    { label: 'View Analytics', icon: TrendingUp },
+    { label: 'Set Goal', icon: Calendar }
   ]);
 
   // Update functions

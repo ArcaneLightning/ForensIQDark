@@ -103,7 +103,7 @@ export const useAnalyticsData = () => {
   ]);
 
   // Top topics
-  const [topTopics, setTopTopics] = useState<TopTopic[]>([
+  const [topTopics] = useState<TopTopic[]>([
     { topic: 'Climate Change', count: 12, avgScore: 8.4 },
     { topic: 'AI & Technology', count: 10, avgScore: 8.7 },
     { topic: 'Education Reform', count: 8, avgScore: 8.1 },
@@ -120,21 +120,21 @@ export const useAnalyticsData = () => {
   ]);
 
   // Performance times
-  const [performanceTimes, setPerformanceTimes] = useState<PerformanceTime[]>([
+  const [performanceTimes] = useState<PerformanceTime[]>([
     { timeSlot: 'Morning (9-12 AM)', averageScore: 9.1 },
     { timeSlot: 'Afternoon (2-5 PM)', averageScore: 8.3 },
     { timeSlot: 'Evening (7-10 PM)', averageScore: 7.8 }
   ]);
 
   // Improvement areas
-  const [improvementAreas, setImprovementAreas] = useState<ImprovementArea[]>([
+  const [improvementAreas] = useState<ImprovementArea[]>([
     { area: 'Voice Modulation', change: '-12%' },
     { area: 'Eye Contact', change: '+8%' },
     { area: 'Gesture Usage', change: '+3%' }
   ]);
 
   // Key metrics
-  const [keyMetrics, setKeyMetrics] = useState({
+  const [keyMetrics] = useState({
     totalSessions: 156,
     averageScore: 8.7,
     practiceHours: 89,

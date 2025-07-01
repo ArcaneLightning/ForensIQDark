@@ -3,21 +3,11 @@ import ProtectedRoute from '../../components/ProtectedRoute';
 import { useProfileData } from '../../hooks/useProfileData';
 
 import { 
-  User, 
-  Settings, 
-  Bell, 
-  Shield, 
-  CreditCard, 
-  Download,
   Edit3,
   Camera,
   Save,
   X,
-  Check,
-  Star,
-  Award,
-  Target,
-  Clock
+  Check
 } from 'lucide-react';
 
 export default function Profile() {
@@ -382,7 +372,9 @@ export default function Profile() {
                   <h3 className="text-lg font-semibold mb-4">Payment Method</h3>
                   <div className="flex items-center justify-between p-4 bg-gray-700/50 rounded-lg">
                     <div className="flex items-center space-x-3">
-                      <CreditCard className="w-6 h-6 text-blue-400" />
+                      <div className="w-6 h-6 text-blue-400">
+                        {/* CreditCard icon */}
+                      </div>
                       <div>
                         <div className="font-medium">•••• •••• •••• 4242</div>
                         <div className="text-sm text-gray-400">Expires 12/25</div>

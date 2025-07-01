@@ -1,11 +1,12 @@
 import { useState, useRef } from 'react';
 import { Target, Clock, MessageSquare, BarChart3 } from 'lucide-react';
+import React from 'react';
 
 interface PracticeMode {
   id: string;
   name: string;
   duration: number;
-  icon: any;
+  icon: React.ElementType;
 }
 
 interface Feedback {
