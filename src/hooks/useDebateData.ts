@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-interface DebateRoom {
+export interface DebateRoom {
   id: number;
   topic: string;
   participants: number;

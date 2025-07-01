@@ -1,6 +1,7 @@
 'use client';
 import ProtectedRoute from '../../components/ProtectedRoute';
 import { useDebateData } from '../../hooks/useDebateData';
+import type { DebateRoom } from '../../hooks/useDebateData';
 
 import { 
   Users, 
@@ -20,6 +21,11 @@ export default function Debate() {
     setIsInDebate,
     debateTime,
     isSpeaking,
+    setIsSpeaking,
+    debateRooms,
+    userStats,
+    recentDebates,
+    aiDebate,
     startAIDebate,
     endAIDebate,
     addUserArgument
@@ -31,7 +37,7 @@ export default function Debate() {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const joinRoom = (room: unknown) => {
+  const joinRoom = (room: DebateRoom) => {
     setSelectedRoom(room);
     setIsInDebate(true);
   };
@@ -483,7 +489,7 @@ export default function Debate() {
                     </div>
                   ) : (
                     <div className="bg-gray-700 rounded-lg p-4 text-center">
-                      <p className="text-gray-400 text-sm">AI hasn't responded yet</p>
+                      <p className="text-gray-400 text-sm">AI hasn&apos;t responded yet</p>
                     </div>
                   )}
                   
