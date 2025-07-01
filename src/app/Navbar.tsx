@@ -41,7 +41,19 @@ export default function Navbar() {
           </ul>
           <div className="flex items-center gap-4">
             <span className="text-sm text-gray-400 hidden md:block">
-              Welcome, {user.user_metadata?.full_name || user.user_metadata?.name || user.email?.split('@')[0] || 'User'}
+              Welcome, {(() => {
+                const fullName = user.user_metadata?.full_name;
+                if (fullName) {
+                  return fullName.split(' ').map((name: string) => 
+                    name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
+                  ).join(' ');
+                }
+                const emailName = user.email?.split('@')[0];
+                if (emailName) {
+                  return emailName.charAt(0).toUpperCase() + emailName.slice(1).toLowerCase();
+                }
+                return 'User';
+              })()}
             </span>
             <button
               onClick={handleSignOut}

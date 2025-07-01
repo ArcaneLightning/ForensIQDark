@@ -75,4 +75,32 @@ CREATE TABLE profile (
   stats jsonb,
   notifications jsonb,
   created_at timestamptz DEFAULT now()
-); 
+);
+
+-- Function to handle new user signup
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS trigger AS $$
+BEGIN
+  INSERT INTO public.profile (user_id, name, email, join_date, level, points, rank, bio, preferences, achievements, stats, notifications)
+  VALUES (
+    new.id,
+    COALESCE(new.raw_user_meta_data->>'full_name', new.email),
+    new.email,
+    to_char(new.created_at, 'Month YYYY'),
+    'Beginner',
+    0,
+    'Bronze',
+    'Welcome to ForensIQ! Start your journey to becoming a confident speaker.',
+    '{"practiceTime": "20 minutes", "difficulty": "Beginner", "topics": ["Technology", "Politics", "Environment"], "language": "English", "timezone": "UTC"}',
+    '[]',
+    '{"totalSessions": 0, "totalHours": 0, "averageScore": 0, "winRate": 0, "streak": 0, "rank": "New"}',
+    '{"email": true, "push": false, "weekly": true, "achievements": true, "reminders": false}'
+  );
+  RETURN new;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Trigger to automatically create profile on user signup
+CREATE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW EXECUTE PROCEDURE public.handle_new_user(); 

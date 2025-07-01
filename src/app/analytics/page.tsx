@@ -3,18 +3,10 @@ import ProtectedRoute from '../../components/ProtectedRoute';
 import { useAnalyticsData } from '../../hooks/useAnalyticsData';
 
 import { 
-  TrendingUp, 
-  TrendingDown, 
   Target, 
   Award, 
   Clock, 
-  BarChart3,
-  Calendar,
-  Activity,
-  Star,
-  Users,
-  MessageSquare,
-  Mic
+  Activity
 } from 'lucide-react';
 
 export default function Analytics() {
@@ -31,7 +23,6 @@ export default function Analytics() {
     improvementAreas,
     keyMetrics,
     getMetricData,
-    getTrendIcon,
     getTrendColor
   } = useAnalyticsData();
 

@@ -35,7 +35,18 @@ export default function SignUp() {
       setIsLoading(false);
       return;
     }
-    const { error } = await supabase.auth.signUp({ email, password });
+    const fullName = `${formData.firstName} ${formData.lastName}`;
+    const { error } = await supabase.auth.signUp({ 
+      email, 
+      password,
+      options: {
+        data: {
+          full_name: fullName,
+          first_name: formData.firstName,
+          last_name: formData.lastName
+        }
+      }
+    });
     setIsLoading(false);
     if (error) {
       setError(error.message);

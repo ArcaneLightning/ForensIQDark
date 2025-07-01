@@ -5,11 +5,8 @@ import { useDebateData } from '../../hooks/useDebateData';
 import { 
   Users, 
   Clock, 
-  Trophy, 
-  MessageSquare, 
   Mic, 
   MicOff,
-  Play,
   Pause,
   Settings,
   BarChart3,
